@@ -27,6 +27,7 @@ Edit the css for the nav_links class to use flex to match our example. Do not mo
 Style the links so that they have the same color even after they have been visited. This is a “challenge” problem. You should not give or receive help when completing it. */
 
 a:link, a:visited {
+  color: blue;
   text-decoration: none;
 }
 
@@ -45,3 +46,72 @@ Check your work. The corners probably aren’t curving quite as you expected. Us
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
 }
+
+/* Step 7 and Step 8 */
+
+.card {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  width: 450px;
+  flex: 1;
+}
+
+.pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Step 9
+Style the images in the gallery class. These elements will have a solid 10px border with a color of #50C7C7, 10px margin on all four sides and a width of 300px. */
+
+.gallery img {
+  border: 10px solid #50C7C7;
+  margin: 10px;
+  width: 300px;
+}
+
+/* Step 10 */
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Specification for when the screen-size is greater than 900px */
+
+@media screen and (min-width: 900px) {
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav_links {
+    flex-direction: row;
+  }
+
+  .pricing {
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .card {
+    flex: 0 0 275px;
+  }
+
+  body > header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
